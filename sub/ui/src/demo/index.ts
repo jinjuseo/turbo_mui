@@ -25,3 +25,9 @@ export * from "./TypographyDemo"
 export * from "./AlertDemo"
 export * from "./DialogDemo"
 export * from './ProgressDemo'
+export * from "./SkeletonDemo"
+export * from "./SnackbarDemo"
+
+// Layout
+export * from "./GridDemo"
+

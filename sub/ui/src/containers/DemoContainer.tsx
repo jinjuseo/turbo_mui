@@ -6,6 +6,9 @@ import Tab from '@mui/material/Tab';
 import { AlertDemo, AvatarDemo, BadgeDemo, ButtonGroupDemo, ButtonsDemo, CheckboxDemo, ChipDemo, DialogDemo, DividerDemo, FloatingActionButtonDemo, ListDemo, ProgressDemo, RadioGroupDemo, RatingDemo, SelectDemo, SliderDemo, SwitchDemo, TextFieldDemo, ToggleButtonDemo, TooltipDemo, TransferListDemo, TypographyDemo } from '../demo';
 import { CustomButton } from '../components/CustomButton';
 import { useState } from 'react';
+import SkeletonDemo from '../demo/SkeletonDemo';
+import SnackbarDemo from '../demo/SnackbarDemo';
+import GridDemo from '../demo/GridDemo';
 
 const TABS = {
     ButtonsDemo: { label: '버튼 데모', comp: ButtonsDemo },
@@ -30,6 +33,9 @@ const TABS = {
     AlertDemo: { label: 'Alert 데모', comp: AlertDemo },
     DialogDemo: { label: 'Dialog 데모', comp: DialogDemo },
     ProgressDemo: { label: 'Progress 데모', comp: ProgressDemo },
+    SkeletonDemo: { label: 'Skeleton 데모', comp: SkeletonDemo },
+    SnackbarDemo: { label: 'Skeleton 데모', comp: SnackbarDemo },
+    GridDemo: { label: 'Grid 데모', comp: GridDemo },
 } as const
 
 
@@ -52,7 +58,7 @@ export function DemoContainer() {
                     value={key}
                 />)}
             </Tabs>
-            <Box sx={{ px: '16px', py: '16px', overflowY: 'auto', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Box sx={{ overflowY: 'auto', width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 {Comp && <Comp />}
             </Box>
         </Box>
@@ -64,5 +70,5 @@ export function DemoContainer() {
             }}
             variant='contained'
         >Hello2</CustomButton> */}
-    </Box>
+    </Box >
 }
